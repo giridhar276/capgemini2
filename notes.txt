@@ -1,0 +1,570 @@
+*** Everything in python is object ***
+*** Every object contains set of methods *****
+
+objects in python
+-----------------
+
+number
+-----
+number can be integer or decimal or octal or  hexa
+
+aval = 10
+bval = 34.43
+
+string
+-------
+string can be single or double or triple quotes
+
+aname = 'python programming'
+bname = "unix shell"
+cname = """scala programming"""
+
+
+list ( array in C )
+-------------------
+list is collection of elements
+Elements can be set of numbers or strings or any combination
+List elements are defined in []
+
+alist = [10,20,30,40]
+blist = ["python","oracle","java"]
+clist = [19,2,"oracle","hadoop",4343.3]
+
+
+tuple ( READ ONLY )
+-----
+tuple is collection of elements
+Elements can be set of numbers or strings or any combination
+List elements are defined in ()
+***** Elements inside tuple cannot be modified ******
+
+atup = (10,20,30,40)
+btup = ("python","oracle","java")
+ctup = (19,2,"oracle","hadoop",4343.3)
+
+dictionary
+-----------
+dictionary contains elements in key,value pairs
+dictionary elements are defined in {}
+There are NO concept of indexing in dictionary
+In dictionary .. keys are always UNIQUE
+
+syntax :   object = {key:value , key:value , key:value }
+example:     book = {"chap1":10 ,"chap2":20 ,"chap3":30}
+            values= {1:2,3:4,5:6}
+             data = {"chap1":[10,'Mark','UK'] ,"chap2":[20,'Rita','US'] }
+       
+
+set
+----
+set is  unordered collection of UNIQUE elements same type.
+set elements are defined in {}.
+
+aset = {10,10,10,10,10,10,10,20}
+
+
+commenting in python
+-------------------
+
+
+single comment (#)
+---------------
+
+
+
+multiline comment
+------------------
+all the lines defined in between ''' and ''' are ignored by interpreter
+
+'''
+all
+these
+lines
+are commented
+'''
+
+classification of objects
+------------------------
+
+mutable objects ( changable objects )
+-----------------
+list
+dictionary
+set
+
+
+immutable objects ( unchangable objects )
+----------------------------------
+number
+string
+tuple
+
+
+How to display all the list of builtin exceptions and builtin functions ?
+--------------------------------------------------------------------------
+
+dir(__builtins__)
+
+frequently used functions
+--------------------------
+print()
+help()
+input()      : capture input from keyboard
+len()        : display length of string or list or tuple or dictionary or set
+range()      : display the range of numbers
+id()         : display the unique identity of the object
+max()        : display the largest value among the list
+min()        : display the smallest value among the list
+sum()
+isinstance() : will return the boolean 
+type()       : display the type of object
+open()       : open the file    syntax:     open(filename,mode)
+
+conversion functions ( for typecasting)
+--------------------------------------
+int()
+float()
+str()
+list()
+tuple()
+dict()
+set()
+
+
+method : method is object specific
+         string methods are different to list methods
+         all the methods are accessed with . operator
+
+function: functions are common for all the objects
+          print()
+
+
+
+statements
+----------
+
+conditional statements
+- if
+- if-else
+- if-elif-elif- .... else
+
+
+control statements
+-------------------
+for
+while
+
+jump statements
+--------------
+break
+continue
+
+
+
+
+
+
+level1
+level1
+level1
+level1
+if cond:
+	level2
+    	level2
+	level2
+	level2
+	if cond:
+	    level3
+	    level3
+	    level3
+level1
+level1
+
+
+operators
+---------
+
+arithmetic operators: + - * % /
+
+logical operators   : and or not
+
+assignment operators( ++ and -- are NOT allowed in python )
+val =10
+val = val+10   (or) val+=10
+val = val-10   (or) val-=10
+
+relational operators :   <   <=  >   >=    ==       !=
+
+
+special operators    :  in  
+                        as ( used in libraries and exception handling)
+
+
+concatenation operator:  + 
+
+File handling
+---------------
+
+- working with flat files ( csv log conf data  ora )
+
+- working with third party files ( docx pptx pdf mp4 ... )
+
+
+opening file
+-----------
+syntax :     object = open(filename,mode)
+                 fr = open("clients.tx","r")   -----> read mode
+                 fw = open("clients.tx","w")   -----> write mode
+                 fa = open("clients.tx","a")    ----> append mode
+
+
+
+closing file
+------------
+fr.close()
+
+
+reading the file
+------------------
+
+different ways of reading file
+------------------------------
+- reading line by line
+- reading in string format
+- reading in list format
+- using csv library
+- using pandas library
+
+
+
+
+exception handling
+---------------------
+- syntax error
+- runtime error
+
+handling the exceptions in runtime is known as exception handling
+
+
+try
+except
+else    (optional)
+finally (optional)
+raise   (optional)
+
+user defined function (or) definition (or) submodule
+---------------------------------------------------
+-function is simply set of lines defined for the reusability purpose.
+-Generally,we define the function block once..and call it for multiple times
+
+passing arguments
+------------------
+fixed arguments
+default arguments
+keyword arguments
+variable length arguments
+
+
+
+
+lambda :  lambda in python is single liner function which is same as 
+--------  inline function in c++ or java.
+         -In lambdas , the function body will be replaced in the function cal
+
+syntax:   functioname = lambda variables : expression
+
+general function
+------------------
+def add(val):
+    return val + 5
+total = add(5)
+print(total)
+
+using lambda
+-------------
+
+add = lambda x : x + 5
+
+total = add(5)
+print(total)
+
+
+
+
+
+
+library (or) module (or) package
+----------------------------------
+Every libraries contains set of methods
+
+importing the library   ( all the methods will be imported )
+----------------------
+import math
+print(math.log(2))
+print(math.tan(3))
+
+importing required methods ONLY ( . is NOT required in this context )
+-------------------------------
+from math import log,tan
+print(log(2))
+print(tan(2))
+
+importing with alias name
+--------------------------
+import math as m
+print(m.log(2))
+print(m.tan(2))
+
+
+
+
+
+
+
+
+
+
+
+
+frequently used libraries
+-------------------------
+os         : os level activities
+math       : mathematical operations
+sys        : sys and python config data
+shutil     : copy,move, rmtree  etc
+urllib     : read the web, downloading the files
+logging    : logging all the events
+smtplib    : sending the mails
+ftplib     : performing ftp operations
+sysconfig  :  sys and python config data
+zipfile    : create/extract the zip files
+rarfile    : create/extract the rar files
+cryptopgraphy : encrypting and decrypting the data or files
+tarfile    : create/extract the tar files
+filecmp    : comparing files or directories
+sqlite3    : python default database
+csv        : reading/writing csv files
+xml        : reading/writing xml files
+calendar   : display month,year calendar info
+datetime   : working with date n time
+time       : working with date n time
+fractions  : working with decimal values
+glob       : display all the files
+heapq      : more of array operations ( getting largest among list )
+subprocess : executing system commands in python (  subprocess.getoutput("ls -ltr")
+pdb        : python debugger
+platform   : platform information
+random     : random operations ( shuffling , random digit ... )
+re         : grep + awk + sed
+socket     : networking programming
+stat       : stats of the file
+statistics : basic statistics
+telnetlib  : accessing remote servers 
+
+mySql database
+--------------
+
+
+creating database
+-----------------
+create database capgemini ;
+
+display all the databases
+------------------------
+show databases;
+
+access your database
+---------------------
+use capgemini ;
+
+display all the tables
+-----------------------
+show tables ;   ( empty)
+
+
+creating table
+--------------
+create table realestate(street varchar(100) , city varchar(100) ) ;
+
+inserting records
+----------------
+insert into realestate values('101 MG Road','Jamshedpur');
+insert into realestate values('110 GT Road', 'Hyderabad');
+
+display all the records
+-----------------------
+select * from realestate ;
+
+describe table structure
+-----------------------
+desc realestate ;
+
+
+
+libraries
+----------
+- builtin libraries : 
+---------------------
+Builtin libraries are generally used(os operations, math operations, random,logging ,ftp )  by everyone and are installed with python
+
+- third party libraries
+------------------------
+Depending on the requirement( cloud interaction, database, GUI, excel operations ,data analytics) ... developer has to install the third party library from www.pypi.org  ( Python Package Index )
+
+library for mysql :   pymysql
+            oracle:   cx_Oracle
+
+How to install the third party library ?
+----------------------------------------
+In Anaconda prompt ... type the below
+
+pip install pymysql  ( will download from pypi.org and installs
+                       the library )
+
+
+
+
+
+
+
+
+excel operations
+---------------
+
+libraries used in excel operations
+- openpyxl    -  read/write
+- xlsxwriter  -  write
+- pyexcel     -  write 
+- xlrd        -  ( outdated)
+- pandas      -  read/write ( generally used in data science )
+
+
+***** Every library ( builtin & third party ) is       completely 	 documented with readymade examples,syntaxes etc.
+
+
+
+
+
+
+
+
+
+
+
+re library ( regex)
+
+What is re library ?
+---------------------
+re  =  grep + sed + awk
+
+using re library
+---------------
+
+-search
+-match
+-replace
+-findall
+
+
+metacharacters or wildcard characters
+-------------------------------
+^ :  match at the beginning of string
+     if re.search("^python",line)
+
+$ :  match at the end of string
+     if re.search("python$",line)
+
+* : zero or more occurences of preceding char
+     if re.search("pyt*hon",line)     
+
++ : one or more occurences of preceding char
+     if re.search("pyt+hon",line)     
+
+?  : either zero or one occurence of preceding
+     if re.search("pyt?hon",line)     
+
+.  :  any single character or digit
+     if re.search(".ython",line)        
+
+() :  (pattern1|pattern2)
+     if re.search("python|perl" , line)
+
+[] : character class
+     if re.search("[pz]ython" , line)
+     Eg. either python or zython
+
+{} : {min,max}
+     if re.search("pyt{2,5}hon" , line)
+
+
+
+
+There are 2 styles or programming
+-----------------------------------
+
+1. procedural programming or functional programming
+-------------------------
+- top down approach
+
+
+2. object oriented programming
+--------------------------
+- class n object
+- Inheritence
+- polymorphism
+  - function overloading
+  - operator overloading
+
+
+class :  
+--------
+-Class is blueprint of the model
+-Every class contains set of methods and attributes
+
+object :
+--------
+object is instance of the class
+
+constructor
+------------
+-constructor has the same name as that of the class( in java  but NOT in python )
+-constructor is invoked automatically when the objectis created/invoked/intialized
+
+
+
+self: self is the instance of the object
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
